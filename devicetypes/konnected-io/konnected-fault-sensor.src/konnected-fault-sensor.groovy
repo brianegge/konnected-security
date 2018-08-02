@@ -1,5 +1,5 @@
 /**
- *  Konnected Panic Button
+ *  Konnected Fault Sesnor
  *
  *  Copyright 2017 konnected.io
  *
@@ -14,6 +14,7 @@
  *
  */
 metadata {
+  // Useful for connecting to a boiler, low water cutoff, high level alarm
   definition (name: "Konnected Fault Sensor", namespace: "konnected-io", author: "konnected.io", mnmn: "SmartThings", vid: "generic-contact") {
     capability "Switch"
     capability "Sensor"
