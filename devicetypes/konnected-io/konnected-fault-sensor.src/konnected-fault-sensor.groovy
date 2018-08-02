@@ -30,8 +30,8 @@ metadata {
   tiles {
     multiAttributeTile(name:"main", type: "generic", width: 6, height: 4, canChangeIcon: true) {
       tileAttribute ("device.switch", key: "PRIMARY_CONTROL") {
-        attributeState ("off", label: "OK",    icon:"st.illuminance.illuminance.dark",  backgroundColor:"#ffffff")
-        attributeState ("on",  label: "Fault!", icon:"st.illuminance.illuminance.light", backgroundColor:"#e86d13")
+        attributeState ("off", label: "OK",    icon:"st.thermostat.heat",  backgroundColor:"#ffffff")
+        attributeState ("on",  label: "Fault!", icon:"st.thermostat.emergency-heat", backgroundColor:"#e86d13")
       }
     }
     main "main"
@@ -41,11 +41,11 @@ metadata {
 
 
 def isClosed() {
-  normalState == "Normally Open" ? "on" : "off"
+  normalState == "Normally Closed" ? "on" : "off"
 }
 
 def isOpen() {
-  normalState == "Normally Open" ? "off" : "on"
+  normalState == "Normally Closed" ? "off" : "on"
 }
 
 // Update state sent from parent app
